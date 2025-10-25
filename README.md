@@ -10,7 +10,7 @@ These are my Assignments for the **Data 622 — Natural Language Processing** co
 
 ---
 
-## 2) Assignments (Short Descriptions)
+## 2) Assignments Include
 
 **Assignment 1 — Web Scraping Basics**  
 Requests + BeautifulSoup to fetch pages, extract visible text/headings/links, and save snippets.
