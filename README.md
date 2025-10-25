@@ -1,4 +1,4 @@
-# 📚 DATA 622 — Natural Language Processing (UMBC)
+# 📚 DATA 622 — Natural Language Processing
 
 **Author:** Soumya Bhate  
 **Instructor:** Prof. Tony Diana
@@ -6,7 +6,7 @@
 ---
 
 ## 1) Course Description
-These are my **NLP Assignments** for my course **Data 622 — Natural Language Processing** in my **3rd semester at UMBC**, taught by **Prof. Tony Diana**.
+These are my Assignments for the **Data 622 — Natural Language Processing** course in my **3rd semester at UMBC**, taught by **Prof. Tony Diana**.
 
 ---
 
