@@ -68,5 +68,5 @@ LDA/LSI on chunks, hierarchical clustering of topic vectors, top keywords, and a
 
 ## 4) Overview of Files
 
-These assignments walk through the end-to-end NLP pipeline: web data collection, text cleaning/normalization, feature engineering (BoW/TF-IDF), and classic modeling (similarity, classification). You’ll also cover linguistic analysis (POS, dependencies), summarization (extractive/abstractive), embeddings and semantic search, topic modeling/clustering, and applied sentiment/emotion/intent analysis—culminating in practical, reproducible NLP workflows.
+These assignments walk through the end-to-end NLP pipeline: web data collection, text cleaning/normalization, feature engineering (BoW/TF-IDF), and classic modeling (similarity, classification). It also covers - linguistic analysis (POS, dependencies), summarization (extractive/abstractive), embeddings and semantic search, topic modeling/clustering, and applied sentiment/emotion/intent analysis—culminating in practical, reproducible NLP workflows.
 
