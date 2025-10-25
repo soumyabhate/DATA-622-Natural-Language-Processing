@@ -1,86 +1,72 @@
-# generate_readme.py
-from datetime import datetime
-from pathlib import Path
+# 📚 DATA 622 — Natural Language Processing (UMBC)
 
-COURSE_NOTE = (
-    "These are my **NLP Assignments** for my course **Data 622 — Natural Language Processing** "
-    "in my **3rd semester class at UMBC**, taught by **Prof. Tony Diana**."
-)
-
-ASSIGNMENTS = [
-    {
-        "title": "HW1 — Web Scraping Basics",
-        "desc": "Requests + BeautifulSoup to fetch pages, extract visible text/headings/links, and save snippets."
-    },
-    {
-        "title": "HW2 — Text Cleaning & Normalization",
-        "desc": "Lowercasing, punctuation/HTML stripping, stopword removal, stemming vs lemmatization; clean corpora for modeling."
-    },
-    {
-        "title": "HW3 — Similarity & Embeddings",
-        "desc": "Compare TF-IDF cosine vs sentence embeddings; compute sentence/document similarity for retrieval."
-    },
-    {
-        "title": "HW4 — POS & Parsing",
-        "desc": "spaCy POS tagging, dependency parsing, noun chunks; intro to constituency trees and CRF vs HMM conceptually."
-    },
-    {
-        "title": "HW5 — Text Summarization",
-        "desc": "Extractive (TextRank/Lead-k/frequency) and small-model abstractive summaries; compare outputs."
-    },
-    {
-        "title": "HW6 — Story Generation",
-        "desc": "Simple Markov chain generation and small local LM generation; prompt/temperature basics."
-    },
-    {
-        "title": "HW7 — Article Analysis (VentureBeat)",
-        "desc": "LLM summary; key topics; sentiment (LLM vs NB/SVM); emotion; and main theme extraction."
-    },
-    {
-        "title": "HW8 — Cross-Outlet Comparison",
-        "desc": "Two climate articles: semantic similarity, top keywords, sentiment & emotion profiling, concise summaries."
-    },
-    {
-        "title": "HW9 — News Classification",
-        "desc": "AP article: sentiment, intent, emotion; simple domain/topic proportions; compare LLM vs DL sentiment."
-    },
-    {
-        "title": "HW10 — Topics & Clustering",
-        "desc": "LDA/LSI topic modeling on chunks, hierarchical clustering of topic vectors, top keywords, brief summary."
-    },
-]
-
-README = f"""# 📚 DATA 622 — NLP Assignments (UMBC)
-
-> **Author:** Soumya Bhate  
-> **Course:** Data 622 — Natural Language Processing (3rd Semester, UMBC)  
-> **Instructor:** Prof. Tony Diana
-
-{COURSE_NOTE}
-
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![NLP](https://img.shields.io/badge/NLP-Data622-green)
-![Jupyter](https://img.shields.io/badge/Notebooks-Yes-informational)
-![License](https://img.shields.io/badge/Repo-Student%20Work-lightgrey)
+**Author:** Soumya Bhate  
+**Instructor:** Prof. Tony Diana
 
 ---
 
-## 🔎 Table of Contents
-{chr(10).join(f"- [{i+1}. {a['title']}](#hw{i+1}-{a['title'].lower().replace('—','').replace(' ','-').replace('&','and')})" for i,a in enumerate(ASSIGNMENTS))}
+## 1) Course Description
+These are my **NLP Assignments** for my course **Data 622 — Natural Language Processing** in my **3rd semester at UMBC**, taught by **Prof. Tony Diana**.
 
 ---
 
-## 🧭 Overview
-{COURSE_NOTE}
+## 2) Assignments (Short Descriptions)
 
-Each homework folder contains notebooks and/or scripts demonstrating the concepts below.  
-Short descriptions for quick navigation:
+**Assignment 1 — Web Scraping Basics**  
+Requests + BeautifulSoup to fetch pages, extract visible text/headings/links, and save snippets.
 
-{"".join(f"### HW{i+1}. {a['title']}\n{a['desc']}\n\n" for i,a in enumerate(ASSIGNMENTS))}\
-## 🚀 Getting Started
-```bash
-git clone <your-repo-url>.git
-cd <repo>
-# (optional) create a virtual environment
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
-# install per-notebook requirements as needed
+**Assignment 2 — Text Cleaning & Normalization**  
+Lowercasing, HTML/punctuation stripping, stopword removal, and stemming vs. lemmatization.
+
+**Assignment 3 — Similarity & Embeddings**  
+Compare TF-IDF cosine with sentence embeddings; measure sentence/document similarity for retrieval.
+
+**Assignment 4 — POS & Parsing**  
+spaCy POS tags, dependency parses, noun chunks; intro to constituency trees; CRF vs. HMM (concept).
+
+**Assignment 5 — Text Summarization**  
+Extractive (TextRank/Lead-k/frequency) vs. small abstractive summarizers; brief ROUGE overview.
+
+**Assignment 6 — Story Generation**  
+Simple Markov chain text generation and a small local language model for short stories.
+
+**Assignment 7 — Article Analysis (VentureBeat)**  
+LLM summary; key topics; sentiment (LLM vs. NB/SVM); emotion; and main theme detection.
+
+**Assignment 8 — Cross-Outlet Comparison**  
+Two climate articles: semantic similarity, top keywords, sentiment & emotion profiles, concise summaries.
+
+**Assignment 9 — News Classification**  
+AP article: sentiment, intent, and emotion; simple domain/topic proportions; compare LLM vs. DL sentiment.
+
+**Assignment 10 — Topics & Clustering**  
+LDA/LSI on chunks, hierarchical clustering of topic vectors, top keywords, and a brief summary.
+
+---
+
+## 3) Tech Stack
+
+**Libraries / Frameworks**
+- Python, Jupyter Notebooks  
+- pandas, numpy, matplotlib / seaborn  
+- requests, beautifulsoup4 (web scraping)  
+- NLTK, spaCy, benepar (linguistics & parsing)  
+- scikit-learn (TF-IDF, classifiers, clustering, evaluation)  
+- sentence-transformers (sentence embeddings)  
+- transformers (summarization & small LMs)  
+- gensim (LDA/LSI topic modeling)
+
+**Models**
+- spaCy: `en_core_web_sm`  
+- benepar: `benepar_en3`  
+- Sentence-Transformers: `all-MiniLM-L6-v2`  
+- Abstractive summarization: `sshleifer/distilbart-cnn-12-6`  
+- Language model (toy): `distilgpt2`  
+- Sentiment baseline: `distilbert-base-uncased-finetuned-sst-2-english`
+
+---
+
+## 4) Overview of Files
+
+These assignments walk through the end-to-end NLP pipeline: web data collection, text cleaning/normalization, feature engineering (BoW/TF-IDF), and classic modeling (similarity, classification). You’ll also cover linguistic analysis (POS, dependencies), summarization (extractive/abstractive), embeddings and semantic search, topic modeling/clustering, and applied sentiment/emotion/intent analysis—culminating in practical, reproducible NLP workflows.
+
